@@ -29,6 +29,8 @@ would compromise usability that is already established in Omeka core.
 
 * Added screen reader-only headers to pagination controls.
 
+* Removed redundant link titles from image file output.
+
 * Edited core front-end themes ("Berlin," all color variations for "Seasons," and "Thanks, Roy") for accessibility.  Changes include:
 	* Color contrast edits for users with color-perception disabilities.
 	* Link focus styles for keyboard users.

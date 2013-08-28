@@ -10,4 +10,5 @@ CREATE TABLE IF NOT EXISTS `%PREFIX%element_sets` (
 
 INSERT INTO `%PREFIX%element_sets` VALUES 
 (1, NULL, 'Dublin Core', 'The Dublin Core metadata element set is common to all Omeka records, including items, files, and collections. For more information see, http://dublincore.org/documents/dces/.'),
-(3, 'Item', 'Item Type Metadata', 'The item type metadata element set, consisting of all item type elements bundled with Omeka and all item type elements created by an administrator.');
+(3, 'Item', 'Item Type Metadata', 'The item type metadata element set, consisting of all item type elements bundled with Omeka and all item type elements created by an administrator.'),
+(5, 'File', 'Web Accessibility', 'The web accessibility element set applies to files and is meant to help improve the accessibility of an Omeka site, for disabled users.');

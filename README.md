@@ -1,4 +1,55 @@
-# Omeka_a11y readme
+#Omeka_a11y readme
+
+This is an accessible fork of the Omake 2.x code base and core themes. 
+Omeka is &copy; the Roy Rosenzweig Center for History and New Media. This fork
+makes enhancements to their existing code, available in the main Omeka 
+repository.
+
+##Accessibility enhancements in this version:
+* "Web Accessibility" file element set that includes an alternative text element. This element set will allow for the association of a short
+description meant specifically to describe the visual aspects of an image file to a disabled user.  [See W3C's description of how to use alt 
+text.] (http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/H37)
+
+* Updated the file markup code to defer to the alt text element value for alt text on images.
+
+* The theme logo, when used, has had alt text added. Due to its purpose, its current alt text is automatically set to consist of "SITE logo"
+where SITE is the name of the site, as defined in the admin user interface. To remain accessible, the logo must not consist of any text that
+is not the same text as the site's name.
+
+* A core stylesheet called "accessibility.css," where all global CSS classes that aide accessibility can be added. Currently contains a class
+to hide content that is meant to be for screen readers only.
+
+* Added accessible labels to checkbox and radio button element markup. 
+
+* Added label to search form text field.
+
+* Reimplemented accessible unordered list pagination controls.  Input fields in newer pagination controls cause accessibility issues when the
+same input ID is used more than once on the same page (which occurs on "Browse" pages), and removing one instance of pagination controls
+would compromise usability that is already established in Omeka core.
+
+* Added screen reader-only headers to pagination controls.
+
+* Edited core front-end themes ("Berlin," all color variations for "Seasons," and "Thanks, Roy") for accessibility.  Changes include:
+	* Color contrast edits for users with color-perception disabilities.
+	* Link focus styles for keyboard users.
+	* Underlining all links except for h1 links for callout against other areas of text.
+	* Removal of redundant hidden heading that invalidates heading structure on search box in default theme.
+
+##Potential future enhancements
+
+* Allow the theme logo's alt text to be specified in the admin interface.
+
+* Employing text equivalents for rich media items.
+
+* Additions to core accessibility CSS, including global link focus styles.
+
+* More elegant implementation of text field labels. 
+
+* Accessibility enhancements to admin section.
+
+
+We now return you to your regularly scheduled Omeka Readme.
+
 
 # Welcome to Omeka
 
@@ -19,7 +70,7 @@ this program. If not, see [http://www.gnu.org/licenses/](http://www.gnu.org/lice
 Omeka includes:
 
 * [Zend Framework](http://framework.zend.com)
-* [getID3](http://getid3.sourceforge.net)
+* [getID3](http://getid3.sourceforge.net))
 * [jQuery](http://jquery.com)
 * [jQuery UI](http://jqueryui.com)
 * [TinyMCE](http://tinymce.moxiecode.com)

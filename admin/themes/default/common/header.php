@@ -70,6 +70,7 @@
 
     <div class="subhead">
         <?php echo search_form(array('show_advanced' => true)); ?>
+    </div>
             
         <?php if (isset($title)) : ?>
             <?php 
@@ -79,6 +80,5 @@
             ?>
             <h1 class="section-title"><?php echo $title ?></h1>
         <?php endif; ?>
-    </div>
 
     <div id="content" class="ten columns offset-by-two omega">

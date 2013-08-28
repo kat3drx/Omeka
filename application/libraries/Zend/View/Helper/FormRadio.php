@@ -156,10 +156,7 @@ class Zend_View_Helper_FormRadio extends Zend_View_Helper_FormElement
             $optId = $id . '-' . $filter->filter($opt_value);
 
             // Wrap the radios in labels
-            $radio = '<label'
-                    . $this->_htmlAttribs($label_attribs) . '>'
-                    . (('prepend' == $labelPlacement) ? $opt_label : '')
-                    . '<input type="' . $this->_inputType . '"'
+            $radio = '<input type="' . $this->_inputType . '"'
                     . ' name="' . $name . '"'
                     . ' id="' . $optId . '"'
                     . ' value="' . $this->view->escape($opt_value) . '"'
@@ -167,6 +164,7 @@ class Zend_View_Helper_FormRadio extends Zend_View_Helper_FormElement
                     . $disabled
                     . $this->_htmlAttribs($attribs)
                     . $this->getClosingBracket()
+					. '<label for="' .$optId. '">'
                     . (('append' == $labelPlacement) ? $opt_label : '')
                     . '</label>';
 

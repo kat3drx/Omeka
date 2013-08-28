@@ -22,7 +22,7 @@ echo flash();
 
             <?php foreach ($elementSets as $elementSet): ?>
             <fieldset>
-                <h2><?php echo __($elementSet->name); ?></h2>    
+                <h2><?php echo __($elementSet->name); ?></h2>
                 <?php echo element_set_form($file, $elementSet->name); ?>
             </fieldset>
             <?php endforeach; ?>

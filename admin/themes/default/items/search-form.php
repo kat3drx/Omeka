@@ -117,7 +117,7 @@ $formAttributes['method'] = 'GET';
             <?php
                 echo $this->formSelect(
                     'type',
-                    @$_REQUEST['type'],
+                    @$_REQUEST['item-type-search'],
                     array('id' => 'item-type-search'),
                     get_table_options('ItemType')
                 );

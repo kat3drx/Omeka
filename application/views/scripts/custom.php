@@ -15,6 +15,7 @@ add_filter('html_escape', 'nl2br', 2);
 add_filter(array('Display', 'Item', 'Dublin Core', 'Title'), 'show_untitled_items');
 
 add_plugin_hook('public_head', 'theme_header_background');
+add_plugin_hook('public_head', 'accessibility_css');
 
 // If there is a current user, add admin_bar.
 if (!is_admin_theme() && apply_filters('public_show_admin_bar', (bool) current_user() )) {

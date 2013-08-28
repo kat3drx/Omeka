@@ -1,0 +1,8 @@
+/* Web Accessibility
+================================================== */
+
+/* Visually hide content that is specific to screen readers */
+.hidden {
+	position: absolute;
+	left: -999999px;
+}

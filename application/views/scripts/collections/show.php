@@ -16,12 +16,13 @@ if ($collectionTitle == '') {
     <?php if (metadata('collection', 'total_items') > 0): ?>
         <?php foreach (loop('items') as $item): ?>
         <?php $itemTitle = strip_formatting(metadata('item', array('Dublin Core', 'Title'))); ?>
+		<?php $alt = 'fred';#strip_formatting(metadata('file', array('Accessible Element Set', 'Alternative Text'))); ?>
         <div class="item hentry">
             <h3><?php echo link_to_item($itemTitle, array('class'=>'permalink')); ?></h3>
 
             <?php if (metadata('item', 'has thumbnail')): ?>
             <div class="item-img">
-                <?php echo link_to_item(item_image('square_thumbnail', array('alt' => $itemTitle))); ?>
+                <?php echo link_to_item(item_image('square_thumbnail', array('alt' => $alt))); ?>
             </div>
             <?php endif; ?>
 

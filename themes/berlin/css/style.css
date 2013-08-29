@@ -844,9 +844,17 @@ body {
     margin-left:2em;
     }
 
-    #exhibit-pages ul {
+#exhibit-pages ul {
     margin-left: 1.25em;
     margin-top: 1em;
+    }
+
+#exhibit-pages #secondary-nav a{
+    color: #ffffff;
+    }
+
+    #exhibit-pages #secondary-nav .current a{
+    color: #171717;
 }
 
 /* == Simple Pages styles == */

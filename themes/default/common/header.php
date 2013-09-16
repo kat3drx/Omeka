@@ -46,10 +46,15 @@
     queue_js_file('globals');
     echo head_js(); 
     ?>
+    <script type="text/javascript">
+      window.onload=function(){document.getElementById('search-hasJS').style.display="block"; document.getElementById('search-noJS').style.display = 'none';}
+    </script>
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
-
+    <a href="#content" class="hidden-link">Skip to content</a>
+    <a id="search-noJS" href="#search-form" class="hidden-link">Skip to search</a>
+    <a id="search-hasJS" href="#searchform" style="display:none;" onclick="document.forms['search-form'].elements['query'].focus();" class="hidden-link">Skip to search</a>
         <header>
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
             <div id="site-title"><?php echo link_to_home_page(theme_logo()); ?></div>
@@ -60,7 +65,7 @@
         <div id="wrap">
             <nav id="primary-nav">
                 <?php echo public_nav_main(array('role' => 'navigation')); ?>
-                <div id="search-wrap">
+                <div id="search-wrap" role="search">
                     <h2>Search</h2>
                     <?php echo search_form(array('show_advanced' => true)); ?>
                 </div>

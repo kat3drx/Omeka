@@ -2,7 +2,12 @@
 ================================================== */
 
 /* Visually hide content that is specific to screen readers */
-.hidden {
+.hidden, a.hidden-link {
 	position: absolute;
 	left: -999999px;
+}
+
+a.hidden-link:focus {
+	position: relative;
+	left: 0px;
 }

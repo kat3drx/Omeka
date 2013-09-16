@@ -34,7 +34,7 @@
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
             <div id="site-title"><?php echo link_to_home_page(theme_logo()); ?></div>
 
-            <div id="search-container">
+            <div id="search-container" role="search">
                     <?php echo search_form(array('show_advanced'=>TRUE)); ?>
             </div>
             </div>

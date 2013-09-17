@@ -40,7 +40,7 @@
     <a id="search-hasJS" href="searchform" style="display:none;" onclick="document.forms['search-form'].elements['query'].focus();" class="hidden-link">Skip to search</a>
     <div id="wrap">
         <header>
-            <div id="site-title">
+            <div id="site-title" role="banner">
                 <?php echo link_to_home_page(theme_logo()); ?>
             </div>
             <div id="search-container" role="search">
@@ -49,7 +49,7 @@
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
         </header>
 
-        <nav class="top">
+        <nav class="top" role="navigation">
             <?php echo public_nav_main(); ?>
         </nav>
 

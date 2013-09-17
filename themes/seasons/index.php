@@ -5,12 +5,12 @@
 </aside>
 
 <?php if (get_theme_option('Homepage Text')): ?>
-<p><?php echo get_theme_option('Homepage Text'); ?></p>
+<p role="main"><?php echo get_theme_option('Homepage Text'); ?></p>
 <?php endif; ?>
 
 <?php if (get_theme_option('Display Featured Item') !== '0'): ?>
 <!-- Featured Item -->
-<div id="featured-item">
+<div id="featured-item" role="complementary">
     <h2><?php echo __('Featured Item'); ?></h2>
     <?php echo random_featured_items(1); ?>
 </div><!--end featured-item-->
@@ -20,7 +20,7 @@
 
 <?php if (get_theme_option('Display Featured Collection') !== '0'): ?>
 <!-- Featured Collection -->
-<div id="featured-collection">
+<div id="featured-collection" role="complementary">
     <h2><?php echo __('Featured Collection'); ?></h2>
     <?php echo random_featured_collection(); ?>
 </div><!-- end featured collection -->
@@ -33,7 +33,7 @@
 <?php echo exhibit_builder_display_random_featured_exhibit(); ?>
 <?php endif; ?>
 
-<div id="recent-items">
+<div id="recent-items" role="complementary">
     <h2><?php echo __('Recently Added Items'); ?></h2>
 
     <?php

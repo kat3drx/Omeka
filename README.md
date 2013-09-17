@@ -37,6 +37,13 @@ would compromise usability that is already established in Omeka core.
 	* Underlining all links except for h1 links for callout against other areas of text.
 	* Removal of redundant hidden heading that invalidates heading structure on search box in default theme.
 
+* Added landmark roles to core themes.
+
+* Added "Skip to content" and "Skip to search" links to core themes.  "Skip to search" consists of a JS-empowered
+version, which puts the user directly into the search box upon activating the link, and a non-JS version, which
+puts the user directly before the search box. The version used is selected based on the availability of
+Javascript in the active user agent.
+
 ##Potential future enhancements
 
 * Allow the theme logo's alt text to be specified in the admin interface.

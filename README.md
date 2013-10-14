@@ -1,6 +1,6 @@
 #Omeka_a11y readme
 
-This is an accessible fork of the Omeka 2.x code base and core themes. 
+This is an accessible fork of the Omeka 2.x stable branch and core themes. 
 Omeka is &copy; the Roy Rosenzweig Center for History and New Media. This fork
 makes enhancements to their existing code, available in the main Omeka 
 repository.

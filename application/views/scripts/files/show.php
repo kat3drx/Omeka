@@ -13,8 +13,8 @@
 <h1><?php echo $fileTitle; ?></h1>
 
 <div id="primary">
-	<?php $alt = metadata('file', array('Accessible Element Set', 'Alternative Text')); ?>
-    <?php echo file_markup($file, array('imageSize'=>'fullsize'. 'alt'=>$alt)); ?>
+	<?php $alt = metadata('file', array('Web Accessibility', 'Alternative Text')); ?>
+    <?php echo file_markup($file, array('imageSize'=>'fullsize', 'alt'=>$alt)); ?>
     <?php echo all_element_texts('file'); ?>
 </div>
 

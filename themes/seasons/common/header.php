@@ -7,13 +7,7 @@
     <meta name="description" content="<?php echo $description; ?>">
     <?php endif; ?>
 
-    <?php
-    if (isset($title)) {
-        $titleParts[] = strip_formatting($title);
-    }
-    $titleParts[] = option('site_title');
-    ?>
-    <title><?php echo implode(' &middot; ', $titleParts); ?></title>
+    <title><?php echo option('site_title'); echo isset($title) ? ' | ' . strip_formatting($title) : ''; ?></title>
 
     <?php echo auto_discovery_link_tags(); ?>
 
@@ -22,9 +16,9 @@
 
     <!-- Stylesheets -->
     <?php
-    queue_css_url('//fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic');
-    queue_css_file(array('iconfonts', 'normalize', 'style'), 'screen');
-    queue_css_file('print', 'print');
+    queue_css_url('http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic');
+    queue_css_file('normalize');
+    queue_css_file('style');
     echo head_css();
     ?>
 
@@ -35,31 +29,28 @@
     <?php queue_js_file('vendor/respond'); ?>
     <?php queue_js_file('globals'); ?>
     <?php echo head_js(); ?>
+    <script type="text/javascript">
+    window.onload=function(){document.getElementById('search-hasJS').style.display = 'block'; document.getElementById('search-njJS').style.display = 'none';}
+    </script>
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
+    <a href="#content" class="hidden-link">Skip to content</a>
+    <a id="search-noJS" href="search-form" class="hidden-link">Skip to search</a>
+    <a id="search-hasJS" href="searchform" style="display:none;" onclick="document.forms['search-form'].elements['query'].focus();" class="hidden-link">Skip to search</a>
     <div id="wrap">
         <header>
-            <div id="site-title">
+            <div id="site-title" role="banner">
                 <?php echo link_to_home_page(theme_logo()); ?>
             </div>
-            <div id="search-container">
-                <?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
+            <div id="search-container" role="search">
                 <?php echo search_form(array('show_advanced' => true)); ?>
-                <?php else: ?>
-                <?Php echo search_form(); ?>
-                <?php endif; ?>
             </div>
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
         </header>
 
-        <nav class="top">
+        <nav class="top" role="navigation">
             <?php echo public_nav_main(); ?>
         </nav>
 
         <div id="content">
-            <?php
-                if(! is_current_url(WEB_ROOT)) {
-                  fire_plugin_hook('public_content_top', array('view'=>$this));
-                }
-            ?>

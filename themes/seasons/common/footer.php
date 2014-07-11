@@ -1,6 +1,6 @@
 </div><!-- end content -->
 
-<footer>
+<footer role="contentinfo">
 
         <div id="custom-footer-text">
             <?php if ( $footerText = get_theme_option('Footer Text') ): ?>
@@ -12,9 +12,9 @@
         </div>
 
         <p><?php echo __('Proudly powered by <a href="http://omeka.org">Omeka</a>.'); ?></p>
-
-    <?php fire_plugin_hook('public_footer', array('view' => $this)); ?>
-
+        
+    <?php fire_plugin_hook('public_footer'); ?>
+    
 </footer>
 
 </div><!--end wrap-->

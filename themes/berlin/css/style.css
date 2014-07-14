@@ -1748,6 +1748,15 @@ footer nav + p {
   width: 220px;
   margin-left: 0;
 }
+
+#exhibit-pages #secondary-nav a{
+    color: #ffffff;
+}
+
+#exhibit-pages #secondary-nav .current a{
+    color: #171717;
+}
+
 @media only screen and (max-width: 767px) {
   .exhibits.summary #exhibit-pages {
     margin: 0;

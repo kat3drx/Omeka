@@ -40,11 +40,10 @@
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
     <div id="wrap">
         <header>
-            <div id="site-title">
+            <div id="site-title" role="banner">
                 <?php echo link_to_home_page(theme_logo()); ?>
             </div>
-            <div id="search-container">
-                <?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
+            <div id="search-container" role="search">
                 <?php echo search_form(array('show_advanced' => true)); ?>
                 <?php else: ?>
                 <?Php echo search_form(); ?>
@@ -53,7 +52,7 @@
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
         </header>
 
-        <nav class="top">
+        <nav class="top" role="navigation">
             <?php echo public_nav_main(); ?>
         </nav>
 

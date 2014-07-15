@@ -97,21 +97,24 @@
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
-
+    <a href="#content" class="hidden-link">Skip to content</a>
+    <a id="search-noJS" href="#search-form" class="hidden-link">Skip to search</a>
+    <a id="search-hasJS" href="#searchform" style="display:none;" onclick="document.forms['search-form'].elements['query'].focus();" class="hidden-link">Skip to search</a>
         <header>
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
-            <div id="site-title"><?php echo link_to_home_page(theme_logo()); ?></div>
+            <div id="site-title" role="banner"><?php echo link_to_home_page(theme_logo()); ?></div>
         </header>
             
         <div class="menu-button button">Menu</div>
             
         <div id="wrap">
-            <nav id="primary-nav">
+            <nav id="primary-nav" role="navigation">
                 <?php echo public_nav_main(array('role' => 'navigation')); ?>
-                <div id="search-wrap">
+                <div id="search-wrap" role="search">
                     <?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
                     <?php echo search_form(array('show_advanced' => true)); ?>
                     <?php else: ?>
+                    <h2>Search</h2>
                     <?php echo search_form(); ?>
                     <?php endif; ?>
                 </div>

@@ -1,5 +1,5 @@
 <?php echo $this->form('search-form', $options['form_attributes']); ?>
-    <?php echo $this->formText('query', $filters['query'], array('title' => __('Search'))); ?>
+    <?php echo '<label for="query">Search this site: </label">'.$this->formText('query', $filters['query'], array('title' => __('Search'))); ?>
     <?php if ($options['show_advanced']): ?>
     <fieldset id="advanced-form">
         <fieldset id="query-types">
@@ -10,7 +10,7 @@
         <fieldset id="record-types">
             <p><?php echo __('Search only these record types:'); ?></p>
             <?php foreach ($record_types as $key => $value): ?>
-                <?php echo $this->formCheckbox('record_types[]', $key, in_array($key, $filters['record_types']) ? array('checked' => true, 'id' => 'record_types-' . $key) : null); ?> <?php echo $value; ?><br>
+                <?php echo $this->formCheckbox('record_types[]', $key, in_array($key, $filters['record_types']) ? array('checked' => true, 'id' => 'record_types-' . $key) : null); ?> <label <?php echo 'for="record_types-'.$key.'"';?>><?php echo $value."</label>"; ?><br>
             <?php endforeach; ?>
         </fieldset>
         <?php elseif (is_admin_theme()): ?>

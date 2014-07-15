@@ -38,3 +38,12 @@ function admin_bar_class($attributes) {
     $attributes['class'] = trim('admin-bar '.$attributes['class']);
     return $attributes;
 }
+
+
+/**
+ * Styles for web accessibility.
+ */
+function accessibility_css() {
+    queue_css_file('accessibility', 'screen');
+}
+

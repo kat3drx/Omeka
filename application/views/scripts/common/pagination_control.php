@@ -2,7 +2,7 @@
 if ($this->pageCount > 1):
     $getParams = $_GET;
 ?>
-<nav class="pagination-nav" aria-label="<?php echo __('Pagination'); ?>">
+<nav class="pagination-nav" role="navigaton" aria-label="<?php echo __('Paging Controls'); ?>">
     <ul class="pagination">
         <?php if (isset($this->previous)): ?>
         <!-- Previous page link -->
@@ -33,7 +33,7 @@ if ($this->pageCount > 1):
 
         // Manually create this input to allow an omitted ID
         $pageInput = '<input type="text" name="page" title="'
-                    . html_escape(__('Current Page'))
+                    . html_escape(__('Current Page, ' . html_escape($this->current)))
                     . '" value="'
                     . html_escape($this->current) . '">';
         echo __('%s of %s', $pageInput, $this->last);

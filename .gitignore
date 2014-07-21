@@ -17,9 +17,9 @@
 # Test files
 /application/tests/_files/temp/
 
-# Plugins and themes
+# Plugins only
+# Omeka_a11y ships with accessible versions of berlin, default, and seasons 
 /plugins/
-/themes/
 
 # Files
 /files/original/*

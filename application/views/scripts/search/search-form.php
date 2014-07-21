@@ -1,5 +1,5 @@
 <?php echo $this->form('search-form', $options['form_attributes']); ?>
-    <?php echo '<label for="query">Search this site: </label">'.$this->formText('query', $filters['query'], array('title' => __('Search'))); ?>
+    <?php echo '<label for="query">Search this site: </label>'.$this->formText('query', $filters['query'], array('title' => __('Search'))); ?>
     <?php if ($options['show_advanced']): ?>
     <fieldset id="advanced-form">
         <fieldset id="query-types">

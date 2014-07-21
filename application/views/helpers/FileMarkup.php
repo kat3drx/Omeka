@@ -828,6 +828,7 @@ class Omeka_View_Helper_FileMarkup extends Zend_View_Helper_Abstract
          * 4. item title
          */
         $alt = '';
+        $props['alt'] = metadata($file, array('Web Accessibility', 'Alternative Text'));
         if (isset($props['alt'])) {
             $alt = $props['alt'];
         } else if ($fileTitle = metadata($file, 'display title')) {
@@ -838,11 +839,8 @@ class Omeka_View_Helper_FileMarkup extends Zend_View_Helper_Abstract
         $title = '';
         if (isset($props['title'])) {
             $title = $props['title'];
-        } else {
-            $title = $alt;
-        }
-        $props['title'] = $title;
-        
+        } 
+                
         // Build the img tag
         $html = '<img src="' . $uri . '" '.tag_attributes($props) . '/>' . "\n";
         

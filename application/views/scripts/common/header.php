@@ -21,6 +21,7 @@
     <!-- Stylesheets -->
     <?php
     queue_css_file('style');
+    queue_css_file('accessibility');
     echo head_css();
     ?>
 

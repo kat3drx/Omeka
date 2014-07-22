@@ -48,7 +48,7 @@ h3 {
     font-size: 1.25 * $base-font-size;
     line-height: $base-line-height;
     @include trailer(1, 1.25 * $base-font-size);
-    color:#7B8D78;
+    color:#515151;
 }
 
 
@@ -114,9 +114,9 @@ a:link { color:$red; }
 
 a:visited { color:$yellow; }
 
-a:hover { color:#7B8D78; }
+a:hover { color:#4f5a4d; }
 
-a:active { color:#7B8D78; }
+a:active { color:#4f5a4d; }
 
 h1 a, 
 h2 a, 

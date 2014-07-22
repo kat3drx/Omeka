@@ -106,7 +106,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     font-size: 17.5px;
     line-height: 21px;
     margin-bottom: 1.2em;
-    color: #7B8D78;
+    color: #515151;
   }
 
   h4 {
@@ -170,15 +170,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   a:visited {
-    color: #695237;
+    color: #8b712c;
   }
 
   a:hover {
     color: #4f5a4d;
+    text-decoration: underline;
   }
 
   a:active {
     color: #4f5a4d;
+    border: 3px solid #ff0000;
+    padding: 3px;
   }
 
   h1 a,
@@ -240,7 +243,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     font-family: "Lato", sans-serif;
     font-size: 14px;
     line-height: 21px;
-    background-color: #695237;
+    background-color: #8b712c;
     color: #fff;
     border: 0;
     padding: 0.375em;
@@ -396,7 +399,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   .pagination_next,
   .pagination_previous {
-    background-color: #695237;
+    background-color: #8b712c;
     color: #ffffff;
     font-size: 14px;
     padding: 0 10px;
@@ -862,6 +865,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding: 0.75em 1.5em;
     background: #4F584D;
     color: #fff;
+    border-bottom: 1px solid #fff;
   }
   .featured a,
   #featured-exhibit a {
@@ -934,7 +938,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding: 0.75em;
     text-align: center;
     color: #fff;
-    background-color: #695237;
+    background-color: #8b712c;
     border-width: 0 1px 1px 0;
   }
   .items-nav a:hover,
@@ -1171,7 +1175,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     display: block;
     padding: 0.75em;
     color: #fff;
-    background-color: #695237;
+    background-color: #8b712c;
     border-width: 0 1px 1px 0;
   }
   #exhibit-pages ul a:hover {

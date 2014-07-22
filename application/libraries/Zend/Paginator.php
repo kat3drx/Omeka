@@ -173,6 +173,13 @@ class Zend_Paginator implements Countable, IteratorAggregate
     protected $_pages = null;
 
     /**
+     * Form ID value for paginator input text field (for accessibility measures)
+     *
+     * @var string
+     */
+    protected $_formId = null;
+
+    /**
      * View instance used for self rendering
      *
      * @var Zend_View_Interface
@@ -851,6 +858,30 @@ class Zend_Paginator implements Countable, IteratorAggregate
     }
 
     /**
+     * Returns the form ID (see property declaration above).
+     *
+     * @return string
+     */
+    public function getFormId()
+    {
+        return $this->_formId;
+    }
+
+    /**
+     * Sets the form ID (see property declaration above).
+     *
+     * @param  integer $pageRange
+     * @return Zend_Paginator $this
+     */
+
+    public function setFormId($formId)
+    {
+        $this->_formId = $formId;
+
+        return $this;
+    }
+
+    /**
      * Returns the page collection.
      *
      * @param  string $scrollingStyle Scrolling style
@@ -1098,6 +1129,7 @@ class Zend_Paginator implements Countable, IteratorAggregate
         $pages->first            = 1;
         $pages->current          = $currentPageNumber;
         $pages->last             = $pageCount;
+        $pages->formId           = $this->getFormId();
 
         // Previous and next
         if ($currentPageNumber - 1 > 0) {

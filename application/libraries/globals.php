@@ -2710,6 +2710,7 @@ function pagination_links($options = array())
     $totalCount = isset($options['total_results']) ? (int) $options['total_results'] : (int) $p['total_results'];
     $pageNumber = isset($options['page']) ? (int) $options['page'] : (int) $p['page'];
     $itemCountPerPage = isset($options['per_page']) ? (int) $options['per_page'] : (int) $p['per_page'];
+    $formId = isset($options['formId']) ? $options['formId'] : 'defaultFormId';
 
     // Create an instance of Zend_Paginator.
     $paginator = Zend_Paginator::factory($totalCount);
@@ -2717,7 +2718,8 @@ function pagination_links($options = array())
     // Configure the instance.
     $paginator->setCurrentPageNumber($pageNumber)
               ->setItemCountPerPage($itemCountPerPage)
-              ->setPageRange($pageRange);
+              ->setPageRange($pageRange)
+              ->setformId($formId);
 
     return get_view()->paginationControl($paginator, $scrollingStyle, $partial);
 }

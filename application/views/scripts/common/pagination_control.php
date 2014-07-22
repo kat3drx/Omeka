@@ -32,7 +32,7 @@ if ($this->pageCount > 1):
         }
 
         // Manually create this input to allow an omitted ID
-        $pageInput = '<input type="text" name="page" title="'
+        $pageInput = '<input type="text" name="page" id="' . html_escape($this->formID) . '" title="'
                     . html_escape(__('Current Page, ' . html_escape($this->current)))
                     . '" value="'
                     . html_escape($this->current) . '">';

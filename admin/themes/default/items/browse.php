@@ -12,7 +12,7 @@ echo item_search_filters();
 ?>
 
 <?php if ($total_results): ?>
-    <?php echo pagination_links(); ?>
+    <?php echo pagination_links("items-browse-top-id"); ?>
 
     <form action="<?php echo html_escape(url('items/batch-edit')); ?>" method="post" accept-charset="utf-8">
         <div class="table-actions batch-edit-option">
@@ -127,7 +127,7 @@ echo item_search_filters();
         <?php echo common('quick-filters',array(),'items'); ?>
     </form>
 
-    <?php echo pagination_links(); ?>
+    <?php echo pagination_links("items-browse-bottom-id"); ?>
 
     <div id="outputs">
     <span class="outputs-label"><?php echo __('Output Formats'); ?></span>

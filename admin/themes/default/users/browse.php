@@ -39,7 +39,7 @@ echo flash();
 
 </form>
 
-<?php echo pagination_links(); ?>
+<?php echo pagination_links("admin-users-browse-top-id"); ?>
 <table id="users">
     <thead>
         <tr>
@@ -75,6 +75,6 @@ echo flash();
     <?php endforeach; ?>
     </tbody>
 </table>
-<?php echo pagination_links(); ?>
+<?php echo pagination_links("admin-users-browse-bottom-id"); ?>
 <?php fire_plugin_hook('admin_users_browse', array('users' => $users, 'view' => $this)); ?>
 <?php echo foot();?>

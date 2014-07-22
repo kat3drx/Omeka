@@ -6,7 +6,7 @@ Omeka is &copy; the Roy Rosenzweig Center for History and New Media. This fork
 makes enhancements to their existing code, available in the main Omeka 
 repository.
 
-##Accessibility enhancements in this version:
+##Accessibility enhancements in Omeka 2.0.x version:
 * "Web Accessibility" file element set that includes an alternative text element. This element set will allow for the association of a short
 description meant specifically to describe the visual aspects of an image file to a disabled user.  [See W3C's description of how to use alt 
 text.] (http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/H37)
@@ -38,6 +38,10 @@ to hide content that is meant to be for screen readers only.
 version, which puts the user directly into the search box upon activating the link, and a non-JS version, which
 puts the user directly before the search box. The version used is selected based on the availability of
 Javascript in the active user agent.
+
+##Additional accessibility enhancements in Omeka 2.2.x version:
+
+In addition to the above accessibility enhancements, the following additional enhancements have been made: 
 
 * Removed initial rollback pagination controls (unordered lists, from Omeka 1.5).  Added formId as a variable for pagination controls and fed unique form field IDs to text input fields for pagination controls.
 

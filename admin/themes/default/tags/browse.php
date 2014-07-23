@@ -9,7 +9,7 @@ else:
     $pageTitle = __('Browse Tags');
 endif;
 
-$pageTitle .= ' ' .  __('(%s total)', $total_tags);
+$pageTitle .= ' ' .  __('(%s search results)', $total_tags);
 echo head(array('title'=>$pageTitle,'bodyclass'=>'tags browse-tags'));
 echo flash();
 

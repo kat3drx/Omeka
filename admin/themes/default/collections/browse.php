@@ -1,5 +1,5 @@
 <?php 
-$pageTitle = __('Browse Collections') . ' ' .  __('(%s total)', $total_results);
+$pageTitle = __('Browse Collections') . ' ' .  __('(%s search results)', $total_results);
 echo head(array('title'=>$pageTitle, 'bodyclass'=>'collections'));
 echo flash();
 ?>

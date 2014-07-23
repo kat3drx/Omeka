@@ -467,7 +467,7 @@ msgstr "تصفح المجموعات"
 #: application/views/scripts/items/browse.php:6
 #: application/views/scripts/search/index.php:2
 #, php-format
-msgid "(%s total)"
+msgid "(%s search results)"
 msgstr "(%s المجموع)"
 
 #: admin/themes/default/collections/browse.php:23

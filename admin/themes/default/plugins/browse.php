@@ -1,5 +1,5 @@
 <?php 
-$pageTitle = __('Plugins') . ' ' . __('(%s total)', $plugin_count);
+$pageTitle = __('Plugins') . ' ' . __('(%s search results)', $plugin_count);
 echo head(array('title' => $pageTitle, 'bodyclass' => 'plugins browse'));
 echo flash();
 ?>

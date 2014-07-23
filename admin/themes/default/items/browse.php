@@ -1,6 +1,6 @@
 <?php
 queue_js_file('items-browse');
-$pageTitle = __('Browse Items') . ' ' . __('(%s total)', $total_results);
+$pageTitle = __('Browse Items') . ' ' . __('(%s search results)', $total_results);
 echo head(
     array(
         'title' => $pageTitle,

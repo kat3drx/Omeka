@@ -60,4 +60,5 @@ INSERT INTO `%PREFIX%elements` VALUES
 (48, 1, 5, 'Source', 'A related resource from which the described resource is derived', NULL),
 (49, 1, 2, 'Subject', 'The topic of the resource', NULL),
 (50, 1, 1, 'Title', 'A name given to the resource', NULL),
-(51, 1, 13, 'Type', 'The nature or genre of the resource', NULL);
+(51, 1, 13, 'Type', 'The nature or genre of the resource', NULL),
+(52, 5, 1, 'Alternative Text', 'Brief description of image for visually-disabled users', NULL);

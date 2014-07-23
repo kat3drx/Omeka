@@ -45,13 +45,15 @@ In addition to the above accessibility enhancements, the following additional en
 
 * Removed initial rollback pagination controls (unordered lists, from Omeka 1.5).  Added formId as a variable for pagination controls and fed unique form field IDs to text input fields for pagination controls.
 
+* Added themable link-focus styles in core accessibility CSS.
+
+* Added Emiglio theme, with accessibility fixes
+
 ##Potential future enhancements
 
 * Allow the theme logo's alt text to be specified in the admin interface.
 
 * Employing text equivalents for rich media items.
-
-* Additions to core accessibility CSS, including global link focus styles.
 
 * Additional enhancements to pagination controls.
 

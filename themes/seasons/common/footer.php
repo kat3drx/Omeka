@@ -1,6 +1,6 @@
 </div><!-- end content -->
 
-<footer role="contentinfo">
+<footer>
 
         <div id="custom-footer-text">
             <?php if ( $footerText = get_theme_option('Footer Text') ): ?>

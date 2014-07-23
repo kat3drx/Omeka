@@ -1,4 +1,4 @@
-$pageTitle = __('Search Omeka ') . __('(%s total)', $total_results);
+$pageTitle = __('Search Omeka ') . __('(%s search results)', $total_results);
 echo head(array('title' => $pageTitle, 'bodyclass' => 'search'));
 $searchRecordTypes = get_search_record_types();
 ?>

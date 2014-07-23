@@ -33,6 +33,9 @@
 </head>
  <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
+    <a href="#content" class="hidden-link">Skip to content</a>
+    <a id="search-noJS" href="#search-form" class="hidden-link">Skip to search</a>
+    <a id="search-hasJS" href="#searchform" style="display:none;" onclick="document.forms['search-form'].elements['query'].focus();" class="hidden-link">Skip to search</a>
         <header>
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
             <div id="site-title" role="banner"><?php echo link_to_home_page(theme_logo()); ?></div>

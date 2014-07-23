@@ -38,6 +38,9 @@
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
+    <a href="#content" class="hidden-link">Skip to content</a>
+    <a id="search-noJS" href="#search-form" class="hidden-link">Skip to search</a>
+    <a id="search-hasJS" href="#searchform" style="display:none;" onclick="document.forms['search-form'].elements['query'].focus();" class="hidden-link">Skip to search</a>
     <div id="wrap">
         <header>
             <div id="site-title">

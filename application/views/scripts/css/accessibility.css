@@ -11,3 +11,11 @@ a.hidden-link:focus {
 	position: relative;
 	left: 0px;
 }
+
+
+/* Universal link focus styles */
+/* Override border-color in theme CSS with more theme-specific color if desired */
+a:focus{
+  border: 3px solid;
+  border-color: #ff0000;
+}

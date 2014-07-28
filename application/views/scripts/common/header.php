@@ -26,6 +26,7 @@
     ?>
 
     <!-- JavaScripts -->
+    queue_js_file('accessible-search');
     <?php echo head_js(); ?>
 </head>
 

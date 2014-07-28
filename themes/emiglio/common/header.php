@@ -29,6 +29,7 @@
     <!-- JavaScripts -->
     <?php 
     queue_js_file('globals');
+    queue_js_file('accessible_search');
     queue_js_file('jquery-accessibleMegaMenu');
     echo head_js(); 
     ?>

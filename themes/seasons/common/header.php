@@ -33,6 +33,7 @@
     <?php queue_js_file('vendor/selectivizr'); ?>
     <?php queue_js_file('jquery-extra-selectors'); ?>
     <?php queue_js_file('vendor/respond'); ?>
+    <?php queue_js_file('accessible_search'); ?>
     <?php queue_js_file('globals'); ?>
     <?php echo head_js(); ?>
 </head>

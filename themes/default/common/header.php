@@ -91,6 +91,7 @@
     queue_js_file('vendor/modernizr');
     queue_js_file('vendor/selectivizr', 'javascripts', array('conditional' => '(gte IE 6)&(lte IE 8)'));
     queue_js_file('vendor/respond');
+    queue_js_file('accessible_search');
     queue_js_file('globals');
     echo head_js(); 
     ?>

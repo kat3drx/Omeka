@@ -38,8 +38,7 @@ echo flash();
 <input type='radio' name='search-type' value='email' /><span><?php echo __('Email'); ?></span>
 
 </form>
-
-<?php echo pagination_links("admin-users-browse-top-id"); ?>
+<?php echo pagination_links(array('formId' => 'admin-users-browse-top-id')); ?>
 <table id="users">
     <thead>
         <tr>
@@ -75,6 +74,6 @@ echo flash();
     <?php endforeach; ?>
     </tbody>
 </table>
-<?php echo pagination_links("admin-users-browse-bottom-id"); ?>
+<?php echo pagination_links(array('formId' => 'admin-users-browse-bottom-id')); ?>
 <?php fire_plugin_hook('admin_users_browse', array('users' => $users, 'view' => $this)); ?>
 <?php echo foot();?>

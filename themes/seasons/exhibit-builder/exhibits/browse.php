@@ -18,7 +18,7 @@ echo head(array('title' => $title, 'bodyclass' => 'exhibits browse'));
     )); ?>
 </nav>
 
-<?php echo pagination_links(); ?>
+<?php echo pagination_links(array('formId' => 'exhibits-browse-top-id')); ?>
 
 <?php $exhibitCount = 0; ?>
 <?php foreach (loop('exhibit') as $exhibit): ?>
@@ -37,7 +37,7 @@ echo head(array('title' => $title, 'bodyclass' => 'exhibits browse'));
     </div>
 <?php endforeach; ?>
 
-<?php echo pagination_links(); ?>
+<?php echo pagination_links(array('formId' => 'exhibits-browse-bottom-id')); ?>
 
 <?php else: ?>
 <p><?php echo __('There are no exhibits available yet.'); ?></p>

@@ -5,7 +5,7 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
 
 <div id="primary">
     <h1><?php echo $pageTitle; ?> <?php echo __('(%s total)', $total_results); ?></h1>
-    <?php echo pagination_links(); ?>
+    <?php echo pagination_links(array('formId' => 'collections-browse-top-id')); ?>
     
     <?php
     $sortLinks[__('Title')] = 'Dublin Core,Title';
@@ -47,7 +47,7 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
 
     <?php endforeach; ?>
 
-    <?php echo pagination_links(); ?>
+    <?php echo pagination_links(array('formId' => 'collections-browse-bottom-id')); ?>
   
     <?php else: ?>
       <p><?php echo __('There are no collections.'); ?></p>

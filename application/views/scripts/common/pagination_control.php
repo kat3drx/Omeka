@@ -32,8 +32,8 @@ if ($this->pageCount > 1):
         }
 
         // Manually create this input to allow an omitted ID
-        $pageInput = '<label class="hidden" for="' . html_escape($this->formID) . '">Go directly to page</label>'
-                    . '<input type="text" name="page" id="' . html_escape($this->formID) . '" title="'
+        $pageInput = '<label class="hidden" for="' . html_escape($this->formId) . '">Go directly to page</label>'
+                    . '<input type="text" name="page" id="' . html_escape($this->formId) . '" title="'
                     . html_escape(__('Current Page, ' . html_escape($this->current)))
                     . '" value="'
                     . html_escape($this->current) . '">';

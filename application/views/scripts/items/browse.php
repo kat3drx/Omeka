@@ -3,15 +3,14 @@ $pageTitle = __('Browse Items');
 echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 ?>
 
-<h1><?php echo $pageTitle;?> <?php echo __('(%s total)', $total_results); ?></h1>
+<h1><?php echo $pageTitle;?> <?php echo __('(%s search result(s))', $total_results); ?></h1>
 
 <nav class="items-nav navigation secondary-nav">
     <?php echo public_nav_items(); ?>
 </nav>
 
 <?php echo item_search_filters(); ?>
-
-<?php echo pagination_links("items-browse-top-id"); ?>
+<?php echo pagination_links(array('formId' => 'items-browse-top-id')); ?>
 
 <?php if ($total_results > 0): ?>
 
@@ -54,7 +53,7 @@ $sortLinks[__('Date Added')] = 'added';
 </div><!-- end class="item hentry" -->
 <?php endforeach; ?>
 
-<?php echo pagination_links("items-browse-bottom-id"); ?>
+<?php echo pagination_links(array('formId' => 'items-browse-bottom-id')); ?>
 
 <div id="outputs">
     <span class="outputs-label"><?php echo __('Output Formats'); ?></span>

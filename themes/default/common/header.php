@@ -33,7 +33,7 @@
     <?php
     ($backgroundColor = get_theme_option('background_color')) || ($backgroundColor = "#FFFFFF");
     ($textColor = get_theme_option('text_color')) || ($textColor = "#444444");
-    ($linkColor = get_theme_option('link_color')) || ($linkColor = "#888888");
+    ($linkColor = get_theme_option('link_color')) || ($linkColor = "#595959");
     ($buttonColor = get_theme_option('button_color')) || ($buttonColor = "#000000");
     ($buttonTextColor = get_theme_option('button_text_color')) || ($buttonTextColor = "#FFFFFF");
     ($titleColor = get_theme_option('header_title_color')) || ($titleColor = "#000000");

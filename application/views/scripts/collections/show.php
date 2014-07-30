@@ -13,7 +13,6 @@ $collectionTitle = strip_formatting(metadata('collection', array('Dublin Core', 
     <?php if (metadata('collection', 'total_items') > 0): ?>
         <?php foreach (loop('items') as $item): ?>
         <?php $itemTitle = strip_formatting(metadata('item', array('Dublin Core', 'Title'))); ?>
-        <?php $alt = strip_formatting(metadata('file', array('Web Accessibility', 'Alternative Text'))); ?>
         <div class="item hentry">
             <h3><?php echo link_to_item($itemTitle, array('class'=>'permalink')); ?></h3>
 

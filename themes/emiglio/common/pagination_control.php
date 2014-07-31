@@ -2,13 +2,13 @@
 if ($this->pageCount > 1):
     $getParams = $_GET;
 ?>
-<nav class="pagination-nav" aria-label="<?php echo __('Pagination'); ?>">
+<nav class="pagination-nav" role="navigation">
     <ul class="pagination">
         <?php if (isset($this->previous)): ?>
         <!-- Previous page link -->
         <li class="pagination_previous">
             <?php $getParams['page'] = $previous; ?>
-            <a rel="prev" href="<?php echo html_escape($this->url(array(), null, $getParams)); ?>"><span class="screen-reader-text"><?php echo __('Previous Page'); ?></span></a>
+            <a rel="prev" href="<?php echo html_escape($this->url(array(), null, $getParams)); ?>"><?php echo __('Previous Page'); ?></a>
         </li>
         <?php endif; ?>
 
@@ -32,8 +32,9 @@ if ($this->pageCount > 1):
         }
 
         // Manually create this input to allow an omitted ID
-        $pageInput = '<input type="text" name="page" title="'
-                    . html_escape(__('Current Page'))
+        $pageInput = '<label class="hidden" for="' . html_escape($this->formId) . '">Go directly to page</label>'
+                    . '<input type="text" name="page" id="' . html_escape($this->formId) . '" title="'
+                    . html_escape(__('Current Page, ' . html_escape($this->current)))
                     . '" value="'
                     . html_escape($this->current) . '">';
         echo __('%s of %s', $pageInput, $this->last);
@@ -45,7 +46,7 @@ if ($this->pageCount > 1):
         <!-- Next page link -->
         <li class="pagination_next">
             <?php $getParams['page'] = $next; ?>
-            <a rel="next" href="<?php echo html_escape($this->url(array(), null, $getParams)); ?>"><span class="screen-reader-text"><?php echo __('Next Page'); ?></span></a>
+            <a rel="next" href="<?php echo html_escape($this->url(array(), null, $getParams)); ?>"><?php echo __('Next Page'); ?></a>
         </li>
         <?php endif; ?>
     </ul>

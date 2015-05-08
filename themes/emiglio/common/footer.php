@@ -1,6 +1,6 @@
         </article>
 
-        <footer>
+        <footer role="contentinfo">
 
             <nav id="bottom-nav">
                 <?php echo public_nav_main(); ?>
@@ -21,8 +21,12 @@
     </div><!-- end wrap -->
 
     <script>
-
     jQuery(document).ready(function() {
+        
+        Omeka.showAdvancedForm();
+        Omeka.skipNav();
+        Emiglio.megaMenu();
+        
         jQuery("#top-nav").accessibleMegaMenu({
             /* prefix for generated unique id attributes, which are required 
                to indicate aria-owns, aria-controls and aria-labelledby */
@@ -50,7 +54,7 @@
             openClass: "open"
         });
     });
-
     </script>
+
 </body>
 </html>

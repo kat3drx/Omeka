@@ -14,7 +14,7 @@
  *
  * @category   Zend
  * @package    Zend_Paginator
- * @copyright  Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
@@ -32,7 +32,7 @@ require_once 'Zend/Json.php';
 /**
  * @category   Zend
  * @package    Zend_Paginator
- * @copyright  Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 class Zend_Paginator implements Countable, IteratorAggregate
@@ -171,13 +171,6 @@ class Zend_Paginator implements Countable, IteratorAggregate
      * @var array
      */
     protected $_pages = null;
-
-    /**
-     * Form ID value for paginator input text field (for accessibility measures)
-     *
-     * @var string
-     */
-    protected $_formId = null;
 
     /**
      * View instance used for self rendering
@@ -858,30 +851,6 @@ class Zend_Paginator implements Countable, IteratorAggregate
     }
 
     /**
-     * Returns the form ID (see property declaration above).
-     *
-     * @return string
-     */
-    public function getFormId()
-    {
-        return $this->_formId;
-    }
-
-    /**
-     * Sets the form ID (see property declaration above).
-     *
-     * @param  integer $pageRange
-     * @return Zend_Paginator $this
-     */
-
-    public function setFormId($formId)
-    {
-        $this->_formId = $formId;
-
-        return $this;
-    }
-
-    /**
      * Returns the page collection.
      *
      * @param  string $scrollingStyle Scrolling style
@@ -1129,7 +1098,6 @@ class Zend_Paginator implements Countable, IteratorAggregate
         $pages->first            = 1;
         $pages->current          = $currentPageNumber;
         $pages->last             = $pageCount;
-        $pages->formId           = $this->getFormId();
 
         // Previous and next
         if ($currentPageNumber - 1 > 0) {

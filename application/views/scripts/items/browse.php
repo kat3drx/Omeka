@@ -10,7 +10,8 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 </nav>
 
 <?php echo item_search_filters(); ?>
-<?php echo pagination_links(array('formId' => 'items-browse-top-id')); ?>
+
+<?php echo pagination_links(); ?>
 
 <?php if ($total_results > 0): ?>
 
@@ -53,7 +54,7 @@ $sortLinks[__('Date Added')] = 'added';
 </div><!-- end class="item hentry" -->
 <?php endforeach; ?>
 
-<?php echo pagination_links(array('formId' => 'items-browse-bottom-id')); ?>
+<?php echo pagination_links(); ?>
 
 <div id="outputs">
     <span class="outputs-label"><?php echo __('Output Formats'); ?></span>

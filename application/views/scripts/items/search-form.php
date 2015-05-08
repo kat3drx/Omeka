@@ -22,8 +22,7 @@ $formAttributes['method'] = 'GET';
         </div>
     </div>
     <div id="search-narrow-by-fields" class="field">
-        <div class="label">
-        <?php echo $this->formLabel('advanced-0-element_id', __('Narrow by Specific Fields')); ?>
+        <div class="label"><?php echo __('Narrow by Specific Fields'); ?></div>
         <div class="inputs">
         <?php
         // If the form has been submitted, retain the number of search
@@ -54,11 +53,9 @@ $formAttributes['method'] = 'GET';
                     ),
                     get_table_options('Element', null, array(
                         'record_types' => array('Item', 'All'),
-                        'sort' => 'alphaBySet')
+                        'sort' => 'orderBySet')
                     )
                 );
-                
-                echo $this->formLabel('advanced-0-type', __('Narrow terms')); 
                 echo $this->formSelect(
                     "advanced[$i][type]",
                     @$rows['type'],
@@ -85,7 +82,7 @@ $formAttributes['method'] = 'GET';
                         'class' => 'advanced-search-terms'
                     )
                 );
-                ?></label>
+                ?>
                 <button type="button" class="remove_search" disabled="disabled" style="display: none;"><?php echo __('Remove field'); ?></button>
             </div>
         <?php endforeach; ?>

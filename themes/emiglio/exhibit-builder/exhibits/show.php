@@ -7,14 +7,15 @@ echo head(array(
 
 <div id="primary">
     <h1><span class="exhibit-page"><?php echo metadata('exhibit_page', 'title'); ?></h1>
-        
-    <?php exhibit_builder_render_exhibit_page(); ?>
+    <div id="exhibit-blocks">
+        <?php exhibit_builder_render_exhibit_page(); ?>
+    </div>
 </div>
 
 <div id="secondary">
     <h2><?php echo exhibit_builder_link_to_exhibit($exhibit); ?></h2>
     <nav id="exhibit-pages">
-        <?php echo emiglio_exhibit_builder_page_nav(); ?>
+        <?php echo exhibit_builder_page_tree($exhibit, $exhibit_page); ?>
     </nav>
 </div>
 

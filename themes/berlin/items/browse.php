@@ -11,7 +11,7 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 
 <?php echo item_search_filters(); ?>
 
-<?php echo pagination_links(array('formId' => 'items-browse-top-id')); ?>
+<?php echo pagination_links(); ?>
 
 <?php if ($total_results > 0): ?>
 
@@ -27,7 +27,7 @@ $sortLinks[__('Date Added')] = 'added';
 <?php endif; ?>
 
 <?php foreach (loop('items') as $item): ?>
-<div class="item hentry">
+<div class="item record">
     <h2><?php echo link_to_item(metadata('item', array('Dublin Core', 'Title')), array('class'=>'permalink')); ?></h2>
     <div class="item-meta">
     <?php if (metadata('item', 'has thumbnail')): ?>
@@ -54,7 +54,7 @@ $sortLinks[__('Date Added')] = 'added';
 </div><!-- end class="item hentry" -->
 <?php endforeach; ?>
 
-<?php echo pagination_links(array('formId' => 'items-browse-bottom-id')); ?>
+<?php echo pagination_links(); ?>
 
 <div id="outputs">
     <span class="outputs-label"><?php echo __('Output Formats'); ?></span>

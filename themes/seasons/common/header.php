@@ -29,25 +29,31 @@
     ?>
 
     <!-- JavaScripts -->
-    <?php queue_js_file('vendor/modernizr'); ?>
-    <?php queue_js_file('vendor/selectivizr'); ?>
-    <?php queue_js_file('jquery-extra-selectors'); ?>
-    <?php queue_js_file('vendor/respond'); ?>
+    <?php 
+    queue_js_file(array(
+        'vendor/selectivizr',
+        'vendor/jquery-accessibleMegaMenu',
+        'vendor/respond',
+        'jquery-extra-selectors',
+        'seasons',
+        'globals'
+    )); 
+    ?>
     <?php queue_js_file('accessible-search'); ?>
-    <?php queue_js_file('globals'); ?>
+
     <?php echo head_js(); ?>
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
+    <a href="#content" id="skipnav"><?php echo __('Skip to main content'); ?></a>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
-    <a href="#content" class="hidden-link">Skip to content</a>
     <a id="search-noJS" href="#search-form" class="hidden-link">Skip to search</a>
     <a id="search-hasJS" href="#searchform" style="display:none;" onclick="document.forms['search-form'].elements['query'].focus();" class="hidden-link">Skip to search</a>
     <div id="wrap">
-        <header>
+        <header role="banner">
             <div id="site-title">
                 <?php echo link_to_home_page(theme_logo()); ?>
             </div>
-            <div id="search-container">
+            <div id="search-container" role="search">
                 <?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
                 <?php echo search_form(array('show_advanced' => true)); ?>
                 <?php else: ?>
@@ -57,11 +63,11 @@
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
         </header>
 
-        <nav class="top">
+        <nav id="top-nav" class="top" role="navigation">
             <?php echo public_nav_main(); ?>
         </nav>
 
-        <div id="content">
+        <div id="content" role="main">
             <?php
                 if(! is_current_url(WEB_ROOT)) {
                   fire_plugin_hook('public_content_top', array('view'=>$this));

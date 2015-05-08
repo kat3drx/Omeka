@@ -56,7 +56,7 @@
         a:visited {
             color: <?php echo thanksroy_brighten($linkColor, 40); ?>;
         }
-        a:hover, a:active {
+        a:hover, a:active, a:focus {
             color: <?php echo thanksroy_brighten($linkColor, -40); ?>;
         }
         
@@ -92,7 +92,9 @@
     queue_js_file('vendor/selectivizr', 'javascripts', array('conditional' => '(gte IE 6)&(lte IE 8)'));
     queue_js_file('vendor/respond');
     queue_js_file('accessible-search');
+    queue_js_file('vendor/jquery-accessibleMegaMenu');
     queue_js_file('globals');
+    queue_js_file('default');
     echo head_js(); 
     ?>
 </head>
@@ -111,7 +113,7 @@
         <div id="wrap">
             <nav id="primary-nav" role="navigation">
                 <?php echo public_nav_main(array('role' => 'navigation')); ?>
-                <div id="search-wrap" role="search">
+                <div id="search-container" role="search">
                     <?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
                     <?php echo search_form(array('show_advanced' => true)); ?>
                     <?php else: ?>
@@ -120,5 +122,5 @@
                     <?php endif; ?>
                 </div>
             </nav>
-            <div id="content">
+            <div id="content" role="main">
                 <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>

@@ -39,30 +39,31 @@ version, which puts the user directly into the search box upon activating the li
 puts the user directly before the search box. The version used is selected based on the availability of
 Javascript in the active user agent.
 
-##Additional accessibility enhancements in Omeka 2.2.x version:
-
-In addition to the above accessibility enhancements, the following additional enhancements have been made: 
-
 * Removed initial rollback pagination controls (unordered lists, from Omeka 1.5).  Added formId as a variable for pagination controls and fed unique form field IDs to text input fields for pagination controls.
 
 * Added themable link-focus styles in core accessibility CSS.
 
 * Added Emiglio theme, with accessibility fixes
 
+##Additional accessibility enhancements in Omeka 2.3. version:
+
+In addition to the above accessibility enhancements, the following additional enhancements have been made: 
+
+* Enriched search form labels
+
+* Additional ARIA roles, from the main project and from within this work 
+
 ##Potential future enhancements
 
-* Allow the theme logo's alt text to be specified in the admin interface.
+* Allow the theme logo's alt text to be specified in the admin interface
 
-* Employing text equivalents for rich media items.
-
-* Additional enhancements to pagination controls.
-
+* Employing text equivalents for rich media items
 
 We now return you to your regularly scheduled Omeka Readme.
 
 # Welcome to Omeka
 
-&copy; 2008-2012 [Roy Rosenzweig Center for History and New Media](http://chnm.gmu.edu/)
+© 2008-2015 [Roy Rosenzweig Center for History and New Media](http://chnm.gmu.edu/)
 
 This program is free software: you can redistribute it and/or modify it under 
 the terms of the GNU General Public License as published by the Free Software 
